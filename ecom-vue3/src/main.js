@@ -25,7 +25,7 @@ const vuetify = createVuetify({
 
 createApp(App)
 .use(vuetify)
-.provide(Emitter)
+.provide("Emitter", Emitter)
 .use(createPinia())
 .use(router)
 .mount("#app");
