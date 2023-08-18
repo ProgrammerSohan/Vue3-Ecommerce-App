@@ -5,11 +5,7 @@
     <v-layout>
       <CartDrawer />
       <v-main>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nesciunt!
-          Facere placeat sit commodi tempora qui. Aspernatur quis, repellendus commodi
-          cumque a dolores beatae quae sed explicabo nulla iusto ut.
-        </p>
+        <slot></slot>
       </v-main>
       <AppNav />
       <AppFooter />
