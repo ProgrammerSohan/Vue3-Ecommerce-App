@@ -5,6 +5,10 @@ import router from "./router";
 //Pinia config
 import { createPinia } from "pinia";
 
+//emitter config
+import mitt from "mitt";
+const Emitter = mitt();
+
 
 // Vuetify
 import "vuetify/styles";
@@ -19,4 +23,9 @@ const vuetify = createVuetify({
   directives,
 });
 
-createApp(App).use(vuetify).use(createPinia()).use(router).mount("#app");
+createApp(App)
+.use(vuetify)
+.provide(Emitter)
+.use(createPinia())
+.use(router)
+.mount("#app");
